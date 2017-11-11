@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.briccsquad.mobileportail.LoginActivity">
+
+    <!-- Login progress -->
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+                android:id="@+id/textView"
+                style="?android:textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Portail des Élèves"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:visibility="visible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/uname"
+                    android:paddingStart="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:hint="@string/prompt_username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:hintEnabled="false"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:paddingStart="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:background="#EDEDED"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="6"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/uname_sign_in_button"
+                style="?android:textAppearanceMediumInverse"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:text="@string/action_sign_in_short"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+</LinearLayout>
